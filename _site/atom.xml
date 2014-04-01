@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+   <title>Jekyll Theme</title>
+   <link href="http://horizon0514.github.io/atom.xml" rel="self" type="application/atom+xml"/>
+   <link href="http://horizon0514.github.io" rel="alternate" type="text/html" />
+   <updated>2014-04-01T18:02:47+08:00</updated>
+   <id>http://horizon0514.github.io</id>
+   <author>
+     <name>horizon huang</name>
+     <email>horizon0514@gmail.com</email>
+   </author>
+
+   
+   <entry>
+     <title>hello world</title>
+     <link href="http://horizon0514.github.io/2014/04/01/hello-world.html"/>
+     <updated>2014-04-01T00:00:00+08:00</updated>
+     <id>http://horizon0514.github.io/2014/04/01/hello-world</id>
+     <content type="html">&lt;h2&gt;hello world&lt;/h2&gt;
+
+&lt;p&gt;this is the first article&lt;/p&gt;
+</content>
+   </entry>
+   
+
+</feed>
