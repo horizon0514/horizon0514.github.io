@@ -5,9 +5,9 @@ paginate: 8
 safe:  false
 
 #Site config
-title: Jekyll Theme
-description: Just another Jekyll theme design and code by zhanxin.info.
-keywords: Jekyll Theme
+title: My blog
+description: hello
+keywords: Jekyll
 url: http://horizon0514.github.io
 feed: /atom.xml
 favicon: http://jekyllrb.com/favicon.png
@@ -38,15 +38,13 @@ follow:
   - class: icon-rss
     url: /atom.xml
   - class: icon-weibo
-    url: http://weibo.com/pizn
-  - class: icon-renren
-    url: http://renren.com
+    url: http://weibo.com/horizon0514
   - class: icon-github-alt
-    url: http://github.com/pizn
+    url: http://github.com/horizon0514
   - class: icon-twitter
-    url: http://twitter.com/piznlin
+    url: http://twitter.com/horizon0514
   - class: icon-google-plus
-    url: http://google.com
+    url: http://plus.google.com/horizon0514
 
 #Links
 customLinks:

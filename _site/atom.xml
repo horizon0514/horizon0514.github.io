@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-   <title>Jekyll Theme</title>
+   <title>My blog</title>
    <link href="http://horizon0514.github.io/atom.xml" rel="self" type="application/atom+xml"/>
    <link href="http://horizon0514.github.io" rel="alternate" type="text/html" />
-   <updated>2014-04-01T18:02:47+08:00</updated>
+   <updated>2014-04-01T20:18:52+08:00</updated>
    <id>http://horizon0514.github.io</id>
    <author>
      <name>horizon huang</name>
