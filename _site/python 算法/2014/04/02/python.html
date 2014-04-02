@@ -11,13 +11,13 @@
          **
         -->
         <meta charset="utf-8">
-        <title>Kunka - My blog</title>
+        <title>归并排序的Python实现 - My blog</title>
         <!-- meta -->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <meta name="generator" content="Jekyll" />
         <meta name="author" content="horizon huang" />
         <meta name="description" content="" />
-        <meta name="keywords" content="Jekyll theme, Kunka" />
+        <meta name="keywords" content="" />
         <!-- atom -->
         <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="http://horizon0514.github.io/atom.xml" />
         <link rel="shortcut icon" href="http://jekyllrb.com/favicon.png" type="image/x-icon" />
@@ -51,9 +51,7 @@
                         
                         
                         
-                          
-                        
-                        <li class="nav-item nav-item-active">
+                        <li class="nav-item ">
                             <a href="http://horizon0514.github.io/index.html">
                                 首页
                             </a>
@@ -116,36 +114,73 @@
         <div class="contain fn-clear">
             <div class="container fn-clear">
                 <div class="main">
-                    
-    <div class="article">
-        <h3 class="title"><a href="http://horizon0514.github.io/python%20%E7%AE%97%E6%B3%95/2014/04/02/python.html" title="归并排序的Python实现">归并排序的Python实现</a></h3>
-        <article class="rexp">
-            <p><p><strong>自己</strong>接触python也有一年多了，但只是之前用来做本科毕设，后来就荒废了。最近几天在网易公开课上观看<a href="http://v.163.com/movie/2010/6/P/0/M6TCSIN1U_M6TCT5JP0.html">麻省理工学院公开课：计算机科学及编程导论</a>,一个例子就是归并排序。</p>
-</p>
-        </article>
-        <a href="http://horizon0514.github.io/python%20%E7%AE%97%E6%B3%95/2014/04/02/python.html" class="more"><i class="icon-link"></i></a>
-        <div class="info">
-            <span class="info-title"><i class="icon-calendar"></i> Published: </span>
-            <span class="info-date">02 April 2014</span>
-        </div>
+                    <div class="article article-post">
+    <h2 class="title">归并排序的Python实现</h2>
+    <div class="info">
+        <span class="info-title"><i class="icon-calendar"></i> Published: </span>
+        <span class="info-date">02 April 2014</span>
+        <span class="info-title"><i class="icon-folder-open"></i> Category: </span>
+        <span class="info-link"><a href="http://horizon0514.github.io/categories.html#python 算法-ref" >python 算法</a></span>
     </div>
+    <p><strong>自己</strong>接触python也有一年多了，但只是之前用来做本科毕设，后来就荒废了。最近几天在网易公开课上观看<a href="http://v.163.com/movie/2010/6/P/0/M6TCSIN1U_M6TCT5JP0.html">麻省理工学院公开课：计算机科学及编程导论</a>,一个例子就是归并排序。</p>
 
-    <div class="article">
-        <h3 class="title"><a href="http://horizon0514.github.io/2014/04/01/hello-world.html" title="hello world">hello world</a></h3>
-        <article class="rexp">
-            <p><h2>hello world</h2>
+<p><strong>归并排序</strong>是一种二分算法，时间复杂度是NlogN。算是比较快了。下面是归并排序的python递归实现。</p>
+<div class="highlight"><pre><code class="python language-python" data-lang="python">    <span class="k">def</span> <span class="nf">merge</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span><span class="n">L2</span><span class="p">):</span>   <span class="c">#归并函数</span>
+        <span class="n">L1</span><span class="o">=</span><span class="n">sort</span><span class="p">(</span><span class="n">L1</span><span class="p">)</span>
+        <span class="n">L2</span><span class="o">=</span><span class="n">sort</span><span class="p">(</span><span class="n">L2</span><span class="p">)</span>
+        <span class="n">result</span><span class="o">=</span><span class="p">[]</span>
+        <span class="k">while</span> <span class="n">L1</span> <span class="ow">and</span> <span class="n">L2</span><span class="p">:</span>       <span class="c">#选择两待归并序列中较大的数插入结果序列中</span>
+            <span class="k">if</span> <span class="n">L1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">L2</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>  
+                <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">L1</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>  
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">L2</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">result</span><span class="o">+</span><span class="n">L1</span><span class="o">+</span><span class="n">L2</span>
 
-<p>this is the first article</p>
-</p>
-        </article>
-        <a href="http://horizon0514.github.io/2014/04/01/hello-world.html" class="more"><i class="icon-link"></i></a>
-        <div class="info">
-            <span class="info-title"><i class="icon-calendar"></i> Published: </span>
-            <span class="info-date">01 April 2014</span>
-        </div>
+
+    <span class="k">def</span> <span class="nf">mergesort</span><span class="p">(</span><span class="n">tosort</span><span class="p">):</span>    <span class="c">#使用递归，总是从中间将待排序的序列分为left和right两个子序列，直至可以直接排序，也就是当子序列长度小于或等于1，这就是递归的出口条件</span>
+        <span class="n">mid</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">tosort</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+        <span class="n">left</span><span class="o">=</span><span class="n">tosort</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">mid</span><span class="p">]</span>
+        <span class="n">right</span><span class="o">=</span><span class="n">tosort</span><span class="p">[</span><span class="n">mid</span><span class="p">:]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">tosort</span><span class="p">)</span> <span class="o">&lt;=</span><span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">tosort</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">merge</span><span class="p">(</span><span class="n">mergesort</span><span class="p">(</span><span class="n">left</span><span class="p">),</span><span class="n">mergesort</span><span class="p">(</span><span class="n">right</span><span class="p">))</span>
+</code></pre></div>
+<p>下面写个函数对之进行测试：
+<code>python
+    import time
+    if __name__==&quot;__main__&quot;:
+        tosort=[2,5,3,12,45,23,13,23,34,45,21,43,14,19,20,30,42]
+        start=time.time()
+        print mergesort(tosort)
+        end=time.time()
+        print &quot;耗时:&quot;,str(end-start)
+</code>
+结果如下：
+```shell
+huang@huang-PC:~/scripts$ python mergesort.py 
+[2, 3, 5, 12, 13, 14, 19, 20, 21, 23, 23, 30, 34, 42, 43, 45, 45]
+耗时： 0.000219106674194</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">由于排序数量有限，也没有和其他排序算法进行比较，因此耗时参考价值不大，后续将会继续进行其他排序算法的分析。
+
+这是自己的第一次技术分享，不知道有没有给你一点点帮助呢。
+
+参考来源：[维基百科](http://zh.wikipedia.org/wiki/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F#Python)
+</code></pre></div>
+    <nav class="article-previous fn-clear">
+        
+        <a class="prev" href="/2014/04/01/hello-world.html" rel="bookmark">&laquo;&nbsp;hello world</a>
+        
+        
+    </nav>
+    <div class="comment">
+        
+            
+            <div class="ds-thread"></div>
+            
+        
     </div>
-
-
+</div>
 
                 </div>
                 <div class="aside">
@@ -196,6 +231,22 @@
             </div>
         </div>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        
+            
+                
+                <script type="text/javascript">
+                    var duoshuoQuery = {short_name:"horizon0514"};
+                    (function() {
+                        var ds = document.createElement('script');
+                        ds.type = 'text/javascript';ds.async = true;
+                        ds.src = 'http://static.duoshuo.com/embed.js';
+                        ds.charset = 'UTF-8';
+                        (document.getElementsByTagName('head')[0]
+                        || document.getElementsByTagName('body')[0]).appendChild(ds);
+                    })();
+                </script>
+                
+            
         
     </body>
 </html>

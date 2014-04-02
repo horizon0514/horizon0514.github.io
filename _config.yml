@@ -6,8 +6,8 @@ safe:  false
 
 #Site config
 title: My blog
-description: hello
-keywords: Jekyll
+description: 
+keywords: 
 url: http://horizon0514.github.io
 feed: /atom.xml
 favicon: http://jekyllrb.com/favicon.png
@@ -64,13 +64,13 @@ customLinks:
 #googleAnaly, your id link UA-12345678-X
 googleAnaly:
   config: true
-  id: UA-40169250-1
+  id: 
 
 #comment config
 disqus:
   config: false
-  id: piznblog
+  id: 
 
 duoshuo:
   config: true
-  id: zhanxin
+  id: horizon0514 
