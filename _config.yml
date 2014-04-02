@@ -10,7 +10,7 @@ description:
 keywords: 
 url: http://horizon0514.github.io
 feed: /atom.xml
-favicon: http://jekyllrb.com/favicon.png
+favicon: 
 
 #Nav config
 nav:
