@@ -29,10 +29,14 @@ nav:
 author:
     name: horizon huang
     email: horizon0514@gmail.com
-    imageLink: http://tp2.sinaimg.cn/1832671293/180/40020872447/1
-    simpleIntro : nothing
+    imageLink: http://ent.51oscar.com/Public/Home/ueditor/php/upload/56311372666771.jpg
+    simpleIntro : 一个奇怪的、矛盾的个体，正在往前狂奔。 
     detailIntro:
         <p>hello world</p>
+        <p>不知道如何自我介绍，于是打上tag吧，通过tag来说我是谁。</p>
+        <p>BUPTer,kindler,Androider,Ubuntuer,Instagramer.</p>
+        <p>小时候读书如饥似渴，却没有什么书读。现在很多书，却完全静不下来。选择了技术这条“不归路”,不知道自己能不能到达终点。且行且珍惜！</p>
+
 #Follow me, you can choose your icon by http://fortawesome.github.io/Font-Awesome/icons/#brand
 follow:
   - class: icon-rss
@@ -45,6 +49,8 @@ follow:
     url: http://twitter.com/horizon0514
   - class: icon-google-plus
     url: http://plus.google.com/horizon0514
+  - class: icon-instagram
+    url: http://instagram.com/horizon0514
 
 #Links
 customLinks:
