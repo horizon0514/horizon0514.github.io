@@ -146,27 +146,26 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">merge</span><span class="p">(</span><span class="n">mergesort</span><span class="p">(</span><span class="n">left</span><span class="p">),</span><span class="n">mergesort</span><span class="p">(</span><span class="n">right</span><span class="p">))</span>
 </code></pre></div>
-<p>下面写个函数对之进行测试：
-<code>python
-    import time
-    if __name__==&quot;__main__&quot;:
-        tosort=[2,5,3,12,45,23,13,23,34,45,21,43,14,19,20,30,42]
-        start=time.time()
-        print mergesort(tosort)
-        end=time.time()
-        print &quot;耗时:&quot;,str(end-start)
-</code>
-结果如下：
-```shell
-huang@huang-PC:~/scripts$ python mergesort.py 
-[2, 3, 5, 12, 13, 14, 19, 20, 21, 23, 23, 30, 34, 42, 43, 45, 45]
-耗时： 0.000219106674194</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">由于排序数量有限，也没有和其他排序算法进行比较，因此耗时参考价值不大，后续将会继续进行其他排序算法的分析。
-
-这是自己的第一次技术分享，不知道有没有给你一点点帮助呢。
-
-参考来源：[维基百科](http://zh.wikipedia.org/wiki/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F#Python)
+<p>下面写个函数对之进行测试：</p>
+<div class="highlight"><pre><code class="python language-python" data-lang="python">    <span class="kn">import</span> <span class="nn">time</span>
+    <span class="k">if</span> <span class="n">__name__</span><span class="o">==</span><span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+        <span class="n">tosort</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">43</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">42</span><span class="p">]</span>
+        <span class="n">start</span><span class="o">=</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="k">print</span> <span class="n">mergesort</span><span class="p">(</span><span class="n">tosort</span><span class="p">)</span>
+        <span class="n">end</span><span class="o">=</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="k">print</span> <span class="s">&quot;耗时:&quot;</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="n">end</span><span class="o">-</span><span class="n">start</span><span class="p">)</span>
 </code></pre></div>
+<p>结果如下：</p>
+<div class="highlight"><pre><code class="python language-python" data-lang="python"><span class="n">huang</span><span class="nd">@huang</span><span class="o">-</span><span class="n">PC</span><span class="p">:</span><span class="o">~/</span><span class="n">scripts</span><span class="err">$</span> <span class="n">python</span> <span class="n">mergesort</span><span class="o">.</span><span class="n">py</span> 
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">45</span><span class="p">]</span>
+<span class="err">耗时：</span> <span class="mf">0.000219106674194</span>
+</code></pre></div>
+<p>由于排序数量有限，也没有和其他排序算法进行比较，因此耗时参考价值不大，后续将会继续进行其他排序算法的分析。</p>
+
+<p>这是自己的第一次技术分享，不知道有没有给你一点点帮助呢。</p>
+
+<p>参考来源：<a href="http://zh.wikipedia.org/wiki/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F#Python">维基百科</a></p>
+
     <nav class="article-previous fn-clear">
         
         <a class="prev" href="/2014/04/01/hello-world.html" rel="bookmark">&laquo;&nbsp;hello world</a>
