@@ -179,7 +179,7 @@ a         { color: #CA1648; text-decoration: none; }
 }
 .main .article p {
     line-height: 1.6;
-    color: #565656;
+    color: ##0E0D0D;
 }
 .main .article ul, .main .article ol {
     list-style-type: disc;
