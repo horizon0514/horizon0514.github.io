@@ -73,13 +73,13 @@ def splitImage(img):
 字模建立好了之后，我们就可以开始识别了。
 
 首先也是要分片，然后分别和字模库里的图片进行对比。不同点最少的就匹配成功了。不废话，奉上代码。
+
 ```
 #!/usr/bin/env python
 # coding=utf-8
 import os
 from PIL import Image,ImageEnhance,ImageFilter
 from split import splitImage  #从split.py 文件中引入splitImage 函数
-
 
 fontMods = []
 for i in range(10):
@@ -91,7 +91,6 @@ def recognizeImage(img,fontMods,j):
     result = ""
     imgs = splitImage(img)
 
-    
     for i in range(4):
         target = imgs[i].convert('1')  #把图片转为黑白，也就是二值化，便于比对
         points = []
