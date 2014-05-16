@@ -12,7 +12,7 @@ tags: [python,图像处理]
 首先就要模拟登陆[北邮研究生教务系统](http://yjxt.bupt.edu.cn)，利用python的request的模块可以很容易的实现，可是问题来了。登陆界面使用了图片验证码。这可怎么办？从来没遇到过这种情况啊。于是一番Google，找到了一些[博文](http://xiaoxia.org/2011/05/31/boring-entry-the-fabled-verification-code-recognition-technology-learning-notes/).
 
 总的来说，简单的验证码识别分为3步。
-- 大量抓取验证码，人工识别，建立字模库
+-大量抓取验证码，人工识别，建立字模库
 - 将待识别的验证码去除噪声，分片。
 - 与字模比对，统计处像素点不同的个数。不同数最低的相似度最高。得出结果
 
