@@ -68,6 +68,53 @@ def splitImage(img):
     return imgs
 
 ```
+当然需要把这些分片后的图片保存起来。上面的代码函数是为了方便之后的调用。这里我们修改一下，不返回imgs，而是使用save方法存为图片。这样我们就可以得到200张字模图片了。挑选出0-9，分别命名为0.jpeg,...9.jpeg,存入fonts文件夹。
+
+字模建立好了之后，我们就可以开始识别了。
+
+首先也是要分片，然后分别和字模库里的图片进行对比。不同点最少的就匹配成功了。不废话，奉上代码。
+```
+#!/usr/bin/env python
+# coding=utf-8
+import os
+from PIL import Image,ImageEnhance,ImageFilter
+from split import splitImage  #从split.py 文件中引入splitImage 函数
+
+
+fontMods = []
+for i in range(10):
+    fontMods.append((str(i),Image.open("./font/%s.jpeg"%i)))    # 建立字模库
+
+def recognizeImage(img,fontMods,j):
+
+    img = Image.open(img).convert("RGB")  #PNG格式的图片必须先转为RGB，否则无法去噪
+    result = ""
+    imgs = splitImage(img)
+
+    
+    for i in range(4):
+        target = imgs[i].convert('1')  #把图片转为黑白，也就是二值化，便于比对
+        points = []
+        for mod in fontMods:
+            diffs = 0
+            for y in range(15):
+                for x in range(10):
+                    if mod[1].getpixel((x,y)) != target.getpixel((x,y)):
+                        diffs += 1
+
+            points.append((diffs,mod[0]))
+        points.sort()
+        print points
+        result += points[0][1]   #不同点最小的匹配成功
+    result += ".jpeg"
+    print "save to",result
+    img.save(result)
+
+for i in range(50):
+    img = "%d.png"%i   #抓取的50张图片分别被命名为0.png,1.png,.....49.png.
+    recognizeImage(img,fontMods,i)
+```
+最终结果显示，匹配成功率100%。
 
 
 
